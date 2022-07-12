@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "target": "es2017",
+    "module": "esnext",
+    "rootDir": "./",
+    "outDir": "/",
+    "esModuleInterop": true,
+    "strict": true
+  }
+}
