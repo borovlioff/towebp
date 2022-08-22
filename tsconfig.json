@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
-    "types": ["node"],
-    "target": "es2017",
-    "module": "esnext",
-    "rootDir": "./",
-    "outDir": "/",
+    "module": "commonjs",
     "esModuleInterop": true,
-    "strict": true
-  }
+    "target": "ES2017",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "outDir": "build",
+  },
+  "lib": ["es2015"],
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }

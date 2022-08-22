@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsc --project index.ts -w",
-    "start": "node index.js"
+    "build": "tsc --project tsconfig.json",
+    "cli": "node build/cli"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "commander": "^9.4.0",
     "webp-converter": "^2.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.6"
   }
 }
