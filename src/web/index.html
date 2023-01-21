@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>towebp</title>
+    <style>
+        body {
+            margin: 0px;
+            height: 98vh;
+        }
+
+        form {
+            width: 100%;
+            height: 100%;
+        }
+
+        .upload-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .upload-container label {
+            display: block;
+            border: 1px solid #92b0b3;
+            background: #f1f1f1;
+            outline: 2px dashed #92b0b3;
+            outline-offset: -10px;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .upload-container input{
+            display: none;
+        }
+
+        .upload-container input:hover {
+            background: #ddd;
+        }
+
+        .upload-container:before {
+            display: block;
+            position: absolute;
+            top: 50%;
+            bottom: 50%;
+            left: 50%;
+            right: 50%;
+            content: " (or) Drag and Drop files here. ";
+            color: #3f8188;
+            font-weight: 900;
+        }
+
+        .upload-btn {
+            margin-left: 300px;
+            padding: 7px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="upload-container">
+            <label><input type="file" id="file_upload" multiple /></label>
+        </div>
+        <br>
+        <button class="upload-btn" onclick="uploadFiles()">Submit</button>
+    </form>
+    <script>
+        function uploadFiles() {
+            var files = document.getElementById('file_upload').files;
+            if (files.length == 0) {
+                alert("Please first choose or drop any file(s)...");
+                return;
+            }
+            var filenames = "";
+            for (var i = 0; i < files.length; i++) {
+                filenames += files[i].name + "\n";
+            }
+            alert("Selected file(s) :\n____________________\n" + filenames);
+        }
+
+
+    </script>
+</body>
+
+</html>
